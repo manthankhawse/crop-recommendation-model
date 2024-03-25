@@ -34,7 +34,7 @@ class model_input(BaseModel):
     
 
 
-recommendation_model = pickle.load(open('crop_recommendation_trained', 'rb'))
+recommendation_model = pickle.load(open('crop_recommendation_trained.sav', 'rb'))
 
 @app.post('/predict')
 def crop_recc(input_parameters: model_input):
